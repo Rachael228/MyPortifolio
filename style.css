@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #d8dee4, #00c6ff);
+    min-height: 100vh;
+}
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #a96b8d;    
+}
+
+nav ul {
+    list-style: none;
+    color: white;
+    font-weight: 500;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #00ffff;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px;
+    flex-wrap: wrap;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+}
+
+.hero-text span{
+    color: #00ffff;
+}
+
+.hero-text p{
+    margin: 20px 0;
+    max-width: 400px;
+    line-height: 1.5;
+}
+
+.btn{
+    background-color: #00ffff;
+    color: #003366;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: white;
+    color: #007bff;
+}
+
+.hero-image img{
+    width: 300px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px 60px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+.about-text h2{
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color:#ff0044;
+}
+
+.about-text p{
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+.about-image img{
+    width: 300px;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.projects{
+    text-align: center;
+    padding: 80px, 60px;
+}
+
+.projects h2{
+    color:#00ffff;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.projects.intro{
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+
+.project-list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.project-card{
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 25px;
+    width: 280px;
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+project-card :hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px, 20px, rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3{
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.project-card p{
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.contact{
+    text-align: center;
+    padding: 80px 60px;
+}
+
+.contact h2{
+    color: #c73b6e;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.contact intro{
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+
+.contact-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.contact-form button{
+    cursor: pointer;
+}
+
+.contact-info{
+    text-align:left;
+    max-width: 300px;
+}
+
+.contact-info h3{
+    color: #b8165a;
+    margin-bottom: 10px;
+}
+
+.contact-info a{
+    color: rgb(156, 41, 105);
+    text-decoration: none;
+}
+
+.contact-info a:hover{
+    color: #00ffff;
+}
+
+footer{
+    text-align:center;
+    padding: 30px 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+@media(max-width: 768px){
+    nav{
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero, .about, .contact-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text, .about-text, .contact-info{
+        hero-image img,
+        .about-image img{
+            width: 250px;
+        }
+        project-list{
+            flex-direction: column;
+            align-items: center;
+        }
+        project-card{
+            width: 90%;
+        }
+    }
+}
